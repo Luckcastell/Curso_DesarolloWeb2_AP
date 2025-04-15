@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafío 2</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8));
+            overflow: hidden;
+        }
+        
+        .background {
+            position: absolute;
+            width: 550px; 
+            height: 510px; 
+            z-index: -1;
+            background: radial-gradient(circle, rgba(0, 255, 0, 0.2), rgba(0, 0, 0, 0.5));
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            animation: pulse 3s infinite; 
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        h1, h2 {
+            color: white; 
+            z-index: 1; 
+            position: relative;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <div>
+        <h1>Desafío N°2</h1>
+        <h2>Clase 14/4</h2>
+    </div>
+    <script>
+        const nombreProducto1 = "Manzana/s";
+        const precioUnitario1 = 100; 
+        const cantidadDeseada1 = prompt("¿Cuántas manzanas quiere comprar?");
+        
+        const nombreProducto2 = "Banana/s";
+        const precioUnitario2 = 150; 
+        const cantidadDeseada2 = prompt("¿Cuántas bananas quiere comprar?");
+        
+        const nombreProducto3 = "Pera/s";
+        const precioUnitario3 = 120; 
+        const cantidadDeseada3 = prompt("¿Cuántas peras quiere comprar?");
+        
+        let precioManzanas = precioUnitario1 * parseInt(cantidadDeseada1);
+        let precioBananas = precioUnitario2 * parseInt(cantidadDeseada2);
+        let precioPeras = precioUnitario3 * parseInt(cantidadDeseada3);
+        
+        let precioTotal = precioManzanas + precioBananas + precioPeras;
+        
+        alert(`Ticket verdulería:
+            ${nombreProducto1}: ${cantidadDeseada1} = ${precioManzanas} 
+            ${nombreProducto2}: ${cantidadDeseada2} = ${precioBananas} 
+            ${nombreProducto3}: ${cantidadDeseada3} = ${precioPeras} 
+            Precio total: ${precioTotal}`);
+    </script>
+</body>
+</html>
