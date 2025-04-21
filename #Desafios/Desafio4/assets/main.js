@@ -17,14 +17,12 @@ function sumarProductos(cantidadDeseada, precioUnitario, precio){
     }else{
         precio = precioUnitario * parseInt(cantidadDeseada);
     }
+    return precio
 }
 
-let precioManzanas;
-sumarProductos(cantidadDeseada1, precioUnitario1, precioManzanas)
-let precioBananas;
-sumarProductos(cantidadDeseada2, precioUnitario2, precioBananas)
-let precioPeras;
-sumarProductos(cantidadDeseada3, precioUnitario3, precioPeras)
+let precioManzanas = sumarProductos(cantidadDeseada1, precioUnitario1, precioManzanas)
+let precioBananas = sumarProductos(cantidadDeseada2, precioUnitario2, precioBananas)
+let precioPeras = sumarProductos(cantidadDeseada3, precioUnitario3, precioPeras)
 
 let precioTotal = precioManzanas + precioBananas + precioPeras;
 
