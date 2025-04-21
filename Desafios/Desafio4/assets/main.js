@@ -10,9 +10,21 @@ const nombreProducto3 = "Peras";
 const precioUnitario3 = 120; 
 const cantidadDeseada3 = prompt(`¿Cuántas ${nombreProducto3} quiere comprar?`);
 
-let precioManzanas = precioUnitario1 * parseInt(cantidadDeseada1);
-let precioBananas = precioUnitario2 * parseInt(cantidadDeseada2);
-let precioPeras = precioUnitario3 * parseInt(cantidadDeseada3);
+function sumarProductos(cantidadDeseada, precioUnitario, precio){
+    if(cantidadDeseada >= 5){
+        precio = precioUnitario * parseInt(cantidadDeseada);
+        precio *= 0.1;
+    }else{
+        precio = precioUnitario * parseInt(cantidadDeseada);
+    }
+}
+
+let precioManzanas;
+sumarProductos(cantidadDeseada1, precioUnitario1, precioManzanas)
+let precioBananas;
+sumarProductos(cantidadDeseada2, precioUnitario2, precioBananas)
+let precioPeras;
+sumarProductos(cantidadDeseada3, precioUnitario3, precioPeras)
 
 let precioTotal = precioManzanas + precioBananas + precioPeras;
 
