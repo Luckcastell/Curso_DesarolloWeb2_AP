@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi página</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../assets/alertas.js"></script>
+    <script src="../assets/e-fun.js"></script>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <div>Mi Tienda</div>
+  <div>
+    <a href="#">Inicio</a>
+    <a href="#">Productos</a>
+    <a href="#">Contacto</a>
+  </div>
+</nav>
+
+<!-- Tarjetas -->
+<div class="container">
+    <div class="card">
+      <img src="https://static.vecteezy.com/system/resources/previews/037/226/710/non_2x/ai-generated-cute-down-jacket-in-cartoon-style-png.png" alt="Campera">
+      <div class="card-content">
+        <h3 class="card-title">¿Hace frío?</h3>
+        <p class="card-text">Si hace frío, ¡ponete una campera bien abrigada!</p>
+        <a href="#" class="card-button">¡Elegir!</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://e7.pngegg.com/pngimages/983/440/png-clipart-cookie-cookie.png" alt="Merienda">
+      <div class="card-content">
+        <h3 class="card-title">¿Tenés hambre?</h3>
+        <p class="card-text">Si tenés hambre, es hora de una rica merienda 🍪🥛.</p>
+        <button class="card-button" onclick="MostrarError('No hay nada para comer')">¡Elegir!</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKscveCghwW3bcAcKG_EUK7qdnqHx0s_Clgg&s" alt="Paraguas">
+      <div class="card-content">
+        <h3 class="card-title">¿Llovizna?</h3>
+        <p class="card-text">Si está lloviendo, mejor llevar un paraguas ☂️.</p>
+        <a href="#" class="card-button">¡Elegir!</a>
+      </div>
+    </div>
+</div>
+
+<script>
+  let nombreUsuario = prompt("Cual es tu nombre:")
+  MensajeDeBienvenida(nombreUsuario);
+ // ConfirmacionDeCompra("Remera");
+
+  const precioU = 100;
+  const descuento = 10;
+
+ console.log(calcularPrecioFinal(precioU,descuento))
+</script>
+
+<!-- FOOTER -->
+<footer>
+  © 2025 Mi Tienda. Todos los derechos reservados.
+</footer>
+
+</body>
+</html>
