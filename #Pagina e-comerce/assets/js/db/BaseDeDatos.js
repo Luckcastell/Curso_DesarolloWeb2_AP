@@ -1,0 +1,17 @@
+const baseDeDatos = [
+    {nombre: "Prisma", autor: "Belén Sancho", precio: 34000, img: "../public/Images/Prisma.png", alt: "Prisma"},
+    {nombre: "Corazones de cristal", autor: "Nini Ríos", precio: 24900, img: "../public/images/Corazones.png", alt: "Corazones de cristal"},
+    {nombre: "¿Confirmamos? Un fake dating en directo", autor: "Agus Drimm Pitch", precio: 25500, img: "../public/Images/Confirmamos.png", alt: "¿Confirmamos? Un fake dating en directo"},
+    {nombre: "Un pacto electrizante", autor: "Malena Hehn", precio: 29700, img: "../public/Images/Electrizante.png", alt: "Un pacto electrizante"},
+    {nombre: "Retratos de instantes perfectos", autor: "Sol Chiara", precio: 33300, img: "../public/Images/Retratos.png", alt: "Retratos de instantes perfectos"},
+    {nombre: "Prisma", autor: "Belén Sancho", precio: 34000, img: "../public/Images/Prisma.png", alt: "Prisma"},
+    {nombre: "Corazones de cristal", autor: "Nini Ríos", precio: 24900, img: "../public/images/Corazones.png", alt: "Corazones de cristal"},
+    {nombre: "¿Confirmamos? Un fake dating en directo", autor: "Agus Drimm Pitch", precio: 25500, img: "../public/Images/Confirmamos.png", alt: "¿Confirmamos? Un fake dating en directo"},
+    {nombre: "Un pacto electrizante", autor: "Malena Hehn", precio: 29700, img: "../public/Images/Electrizante.png", alt: "Un pacto electrizante"},
+    {nombre: "Retratos de instantes perfectos", autor: "Sol Chiara", precio: 33300, img: "../public/Images/Retratos.png", alt: "Retratos de instantes perfectos"},
+    {nombre: "Prisma", autor: "Belén Sancho", precio: 34000, img: "../public/Images/Prisma.png", alt: "Prisma"},
+    {nombre: "Corazones de cristal", autor: "Nini Ríos", precio: 24900, img: "../public/images/Corazones.png", alt: "Corazones de cristal"},
+    {nombre: "¿Confirmamos? Un fake dating en directo", autor: "Agus Drimm Pitch", precio: 25500, img: "../public/Images/Confirmamos.png", alt: "¿Confirmamos? Un fake dating en directo"},
+    {nombre: "Un pacto electrizante", autor: "Malena Hehn", precio: 29700, img: "../public/Images/Electrizante.png", alt: "Un pacto electrizante"},
+    {nombre: "Retratos de instantes perfectos", autor: "Sol Chiara", precio: 33300, img: "../public/Images/Retratos.png", alt: "Retratos de instantes perfectos"},
+]

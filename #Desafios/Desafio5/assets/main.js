@@ -41,4 +41,4 @@ for (let i = 0; i < 3; i++) {  // Simula 3 ventas
     }
     console.log("-----------------------------");
 }
-alert("se muestra en consola, que sino se veia raro")
+alert("se muestra en consola, que si no se veia raro")

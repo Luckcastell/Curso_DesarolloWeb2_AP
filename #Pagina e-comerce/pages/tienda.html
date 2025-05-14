@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto E-commerce</title>
+    <link rel="stylesheet" href="..\assets\styles\index.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container">
+            <h1 class="logo">Tienda de Libros</h1>
+            <nav class="nav-container">
+                <div class="nav-link">
+                    <ul class="nav-links">
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="#">Libros</a></li>
+                        <li><a href="./ofertas.html">Ofertas</a></li>
+                        <li><a href="./contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="nav-vacio">
+                    
+                </div>
+                <ul class="nav-links">
+                    <li class="nav-btn"><button onclick="abrirCarrito()" class="btn">Carrito</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección de Productos -->
+    <main>
+        <section class="productos" id="productos-container"></section>
+
+        <!-- Carrito -->
+        <div id="modalCarrito" class="fixed inset-0 flex items-center justify-center bg-gray-600 bg-opacity-50 hidden">
+            <div class="carrito-content">
+                <h2 class="text-lg font-bold text-gray-800">Carrito de Compras</h2>
+                <div id="contenidoCarrito" class="mt-4 space-y-4"></div>
+                <p class="mt-4 font-bold">Total: $<span id="totalCarrito">0</span></p>
+                <button onclick="cerrarCarrito()" class="absolute top-2 right-2 bg-red-500 hover:bg-red-600 font-bold p-2 rounded">Cerrar carrito</button>
+                <button onclick="BorrarTodoElCarrito()" class="mt-4 w-full bg-red-500 hover:bg-red-600 text-white py-2 rounded">Limpiar carrito</button>
+                <button onclick="finalizarCompra()" class="mt-4 w-full bg-green-500 hover:bg-green-600 text-white py-2 rounded">Comprar todo</button>
+            </div>
+        </div>
+
+        <!-- Categorías -->
+        <section class="categorias" id="categorias-container">
+            <div class="categoria">Ficción</div>
+            <div class="categoria">Ciencia Ficción</div>
+            <div class="categoria">Juvenil</div>
+            <div class="categoria">Ciencia</div>
+            <div class="categoria">Historia</div>
+            <div class="categoria">Biografías</div>
+            <div class="categoria">Literatura Infantil</div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>c 2025 E-commerce de Libros. Todos los derechos reservados.</p>
+            <ul class="redes-sociales">
+                <li><a href="https://github.com/Luckcastell/">GitHub</a></li>
+                <li><a href="https://www.instagram.com/luck_castell/">Instagram</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+<script  src="..\assets/js/carrito.js"></script>
+<script  src="..\assets/js/libros.js"></script>
+</html>

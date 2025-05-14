@@ -1,0 +1,45 @@
+let carrito = [];
+let totalCarrito = 0;
+
+function agregarAlCarrito(nombre, precio) {
+    carrito.push({ nombre, precio });
+    totalCarrito += precio;
+    document.getElementById('totalCarrito').innerText = totalCarrito.toLocaleString();
+    mostrarContenidoCarrito();
+    abrirCarrito();
+}
+
+function mostrarContenidoCarrito() {
+    const contenidoCarrito = document.getElementById('contenidoCarrito');
+    contenidoCarrito.innerHTML = '';
+    carrito.forEach(item => {
+        const itemCarrito = document.createElement('div');
+        itemCarrito.classList.add('carrito-item');
+        itemCarrito.innerHTML = `
+            <h3>${item.nombre}</h3>
+            <p>$${item.precio.toLocaleString()}</p>
+        `;
+        contenidoCarrito.appendChild(itemCarrito);
+    });
+}
+
+function abrirCarrito() {
+    document.getElementById('modalCarrito').style.display = 'flex';
+}
+
+function cerrarCarrito() {
+    document.getElementById('modalCarrito').style.display = 'none';
+}
+
+function BorrarTodoElCarrito() {
+    carrito = [];
+    totalCarrito = 0;
+    document.getElementById('totalCarrito').innerText = totalCarrito.toLocaleString();
+    mostrarContenidoCarrito();
+    cerrarCarrito();
+}
+
+function finalizarCompra() {
+    alert('Compra finalizada. ¡Gracias por su compra!');
+    BorrarTodoElCarrito();
+}
