@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ofertas - Proyecto E-commerce</title>
+    <title>Proyecto E-commerce</title>
     <link rel="stylesheet" href="..\assets\styles\index.css">
 </head>
-<body>
     <!-- Navbar -->
     <header class="navbar">
         <div class="container">
@@ -16,8 +15,8 @@
                     <ul class="nav-links">
                         <li><a href="../index.html">Inicio</a></li>
                         <li><a href="./tienda.html">Libros</a></li>
-                        <li><a href="./categorias.html">Categorías</a></li>
-                        <li><a href="#">Ofertas</a></li>
+                        <li><a href="#">Categorías</a></li>
+                        <li><a href="./ofertas.html">Ofertas</a></li>
                     </ul>
                     <button onclick="abrirCarrito()" class="cart-button">Carrito</button>
                 </div>
@@ -27,7 +26,18 @@
     
     <!-- Main -->
     <main>
-        <!-- Sección de Productos en Oferta -->
+        <!-- Categorías -->
+        <section class="categorias" id="categorias-container">
+            <div class="categoria">Ficción</div>
+            <div class="categoria">Ciencia Ficción</div>
+            <div class="categoria">Juvenil</div>
+            <div class="categoria">Ciencia</div>
+            <div class="categoria">Historia</div>
+            <div class="categoria">Biografías</div>
+            <div class="categoria">Literatura Infantil</div>
+        </section>
+
+        <!-- Sección de Productos -->
         <section class="productos" id="productos-container"></section>
 
         <!-- Carrito -->
@@ -41,17 +51,6 @@
                 <button onclick="finalizarCompra()" class="cart-button2">Comprar todo</button>
             </div>
         </div>
-
-        <!-- Categorías -->
-        <section class="categorias" id="categorias-container">
-            <div class="categoria">Ficción</div>
-            <div class="categoria">Ciencia Ficción</div>
-            <div class="categoria">Juvenil</div>
-            <div class="categoria">Ciencia</div>
-            <div class="categoria">Historia</div>
-            <div class="categoria">Biografías</div>
-            <div class="categoria">Literatura Infantil</div>
-        </section>
     </main>
 
     <!-- Footer -->
@@ -67,6 +66,6 @@
 </body>
     
 <!-- Java Scripts -->
-<script src="..\assets/js/carrito.js"></script>
-<script src="..\assets/js/ofertas.js"></script>
+<script  src="..\assets/js/carrito.js"></script>
+<script  src="..\assets/js/libros.js"></script>
 </html>

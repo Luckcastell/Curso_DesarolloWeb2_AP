@@ -1,9 +1,9 @@
 let carrito = [];
 let totalCarrito = 0;
 
-function agregarAlCarrito(nombre, precio) {
-    carrito.push({ nombre, precio });
-    totalCarrito += precio;
+function agregarAlCarrito(nombre, precio, descontado) {
+    let precioFinal = precio - descontado;
+    totalCarrito += precioFinal;
     document.getElementById('totalCarrito').innerText = totalCarrito.toLocaleString();
     mostrarContenidoCarrito();
     abrirCarrito();
