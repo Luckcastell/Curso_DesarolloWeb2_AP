@@ -21,10 +21,10 @@ const productosContainer = document.getElementById('productos-container');
 baseDeDatos.forEach(producto => {
     if(producto.descuento >= 1){
         const articuloProducto = document.createElement('article');
-        articuloProducto.classList.add('productoA');/*
+        articuloProducto.classList.add('productoA');
         articuloProducto.onclick = function() {
             window.location.href = 'detalles.html';
-        };*/
+        };
         articuloProducto.innerHTML = `
             <img class="producto-img" src="${producto.img}" alt="${producto.alt}">
             <h2 class="producto-titulo">${producto.nombre}</h2>
@@ -32,16 +32,16 @@ baseDeDatos.forEach(producto => {
             <p class="producto-precio">$${producto.precio.toLocaleString()} <span class="descuento">(-${producto.descuento}%)</span></p>
             <div class="oculto">
                 <button class="btn">Ver detalles</button>
-                <button class="btn" onclick="agregarAlCarrito('${producto.nombre}', ${producto.precio}, ${producto.precio * producto.descuento / 100})">Agregar al carrito</button>
+                <button class="btn" onclick="agregarAlCarrito('${producto.nombre}', ${producto.precio}, ${producto.precio * producto.descuento / 100}); event.stopPropagation();">Agregar al Carrito</button>
             </div>    
             `;
         productosContainer.appendChild(articuloProducto);
     }else{
         const articuloProducto = document.createElement('article');
-        articuloProducto.classList.add('productoB');/*
+        articuloProducto.classList.add('productoB');
         articuloProducto.onclick = function() {
             window.location.href = 'detalles.html';
-        };*/
+        };
         articuloProducto.innerHTML = `
             <img class="producto-img" src="${producto.img}" alt="${producto.alt}">
             <h2 class="producto-titulo">${producto.nombre}</h2>
@@ -49,7 +49,7 @@ baseDeDatos.forEach(producto => {
             <p class="producto-precio">$${producto.precio.toLocaleString()}</p>
             <div class="oculto">
                 <button class="btn">Ver detalles</button>
-                <button class="btn" onclick="agregarAlCarrito('${producto.nombre}', ${producto.precio}, ${0})">Agregar al carrito</button>
+                <button class="btn" onclick="agregarAlCarrito('${producto.nombre}', ${producto.precio}, ${0}); event.stopPropagation();">Agregar al carrito</button>
             </div>    
             `;
         productosContainer.appendChild(articuloProducto);
