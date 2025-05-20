@@ -5,6 +5,7 @@ function agregarAlCarrito(nombre, precio, descontado) {
     let precioFinal = precio - descontado;
     totalCarrito += precioFinal;
     document.getElementById('totalCarrito').innerText = totalCarrito.toLocaleString();
+    carrito.push({nombre, precioFinal, precio, descontado});
     mostrarContenidoCarrito();
     abrirCarrito();
 }
@@ -13,14 +14,26 @@ function mostrarContenidoCarrito() {
     const contenidoCarrito = document.getElementById('contenidoCarrito');
     contenidoCarrito.innerHTML = '';
     carrito.forEach(item => {
-        const itemCarrito = document.createElement('div');
-        itemCarrito.classList.add('carrito-item');
-        itemCarrito.innerHTML = `
-            <h3>${item.nombre}</h3>
-            <p>$${item.precio.toLocaleString()}</p>
-        `;
-        contenidoCarrito.appendChild(itemCarrito);
+        if(item.descontado > 0){
+            const itemCarrito = document.createElement('div');
+            itemCarrito.classList.add('carrito-item');
+            itemCarrito.innerHTML = `
+                <h3>${item.nombre}</h3>
+                <p>$${item.precio} - $${item.descontado}</p>
+            `;
+            contenidoCarrito.appendChild(itemCarrito);
+        }
+        else{
+            const itemCarrito = document.createElement('div');
+            itemCarrito.classList.add('carrito-item');
+            itemCarrito.innerHTML = `
+                <h3>${item.nombre}</h3>
+                <p>$${item.precioFinal}</p>
+            `;
+            contenidoCarrito.appendChild(itemCarrito);
+            }
     });
+    
 }
 
 function abrirCarrito() {

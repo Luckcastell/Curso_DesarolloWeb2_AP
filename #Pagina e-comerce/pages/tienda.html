@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto E-commerce</title>
     <link rel="stylesheet" href="..\assets\styles\index.css">
+    <script  src="..\assets/js/db/BaseDeDatos.js"></script>
 </head>
 <body>
     <!-- Navbar -->
@@ -32,7 +33,7 @@
         <div id="modalCarrito">
             <div class="carrito-content">
                 <h2 >Carrito de Compras</h2>
-                <div id="contenidoCarrito" ></div>
+                <div id="contenidoCarrito"></div>
                 <p>Total: $<span id="totalCarrito">0</span></p>
                 <button onclick="cerrarCarrito()" class="cart-button2">Cerrar carrito</button>
                 <button onclick="BorrarTodoElCarrito()" class="cart-button2">Limpiar carrito</button>
@@ -65,6 +66,6 @@
 </body>
     
 <!-- Java Scripts -->
+<script  src="..\assets/js/tienda.js"></script>
 <script  src="..\assets/js/carrito.js"></script>
-<script  src="..\assets/js/libros.js"></script>
 </html>
