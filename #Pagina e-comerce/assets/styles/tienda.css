@@ -22,6 +22,7 @@
     --color-borde-boton: rgb(0, 0, 0);
     --color-sombra: rgba(0, 0, 0, 0.3);
     --color-sombra-carrito: rgba(0, 0, 0, 0.5);
+
 }
 
 * {
@@ -35,6 +36,7 @@ body {
     background-color: var(--color-fondo);
     color: var(--color-texto-primario);
 }
+
 a {
     text-decoration: underline;
     color: var(--color-texto);
@@ -96,44 +98,11 @@ nav {
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
-}.cart-button:hover {
+}
+.cart-button:hover {
     background-color: var(--color-boton-hover);
     color: var(--color-texto-hover);
-}   
-
-.saludo {
-    text-align: center;
-    padding: 30px 20px;
-    background-color: var(--color-fondo);
-}.saludo h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}.saludo p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
 }
-
-.libros {
-    background-color: var(--color-boton);
-    color: var(--color-texto);
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
-}.libros:hover {
-    background-color: var(--color-boton-hover);
-}
-
-.destacados {
-    padding: 2  0px 20px;
-    background-color: var(--color-fondo);
-}.destacados h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 2rem;
-}
-
 
 .productos {
     display: flex;
@@ -259,32 +228,92 @@ nav {
     gap: 1rem;
 }
 
-.redes-sociales li a {
+
+/* Carrito */
+#modalCarrito {
+    display: none;
+    position: fixed;
+    inset: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-sombra-carrito);   
+}
+.carrito-content {
+    background: var(--color-fondo-producto);
+    width: 450px;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 15px var(--color-sombra);
+}
+.carrito-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}.carrito-item h3 {
+    font-size: 1rem;
+    width: 240px;
+}.carrito-item p {
+    width: 135px;
+    text-align: end;
+}.carrito-item button {
+    padding: 2.5px 5px;
+    max-height: 20px;
+    background-color: var(--color-boton); 
     color: var(--color-texto);
-    text-decoration: none;
-    transition: color 0.3s;
+    border: 2px solid var(--color-borde-boton); 
+    border-radius: 5px;
+    cursor: pointer;
+}.carrito-item button:hover {
+    background-color: var(--color-boton-hover);
+    color: var(--color-texto-hover);
+}
+.cart-button2 {
+    margin: 0 2px;
+    padding: 2.5px 5px;
+    background-color: var(--color-boton); 
+    color: var(--color-texto);
+    border: 2px solid var(--color-borde-boton); 
+    border-radius: 5px;
+    cursor: pointer;
+}.cart-button2:hover {
+    background-color: var(--color-boton-hover);
+    color: var(--color-texto-hover);
 }
 
-.redes-sociales li a:hover {
-    color: var(--color-boton-hover);
+
+/* Categorías */
+.categorias {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0.75rem 0;
+}
+.categoria {
+    background: var(--color-boton);
+    color: var(--color-texto);
+    border: 1px solid var(--color-borde-producto);
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 1rem;
+    width: 150px;
+    height: 70px;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+.categoria:hover {
+    transform: scale(1.05);
+    background: var(--color-boton-hover);
+    color: var(--color-texto-hover);
 }
 
-/* Para dispositivos móviles */
+
+/* Para celular */
 @media (max-width: 768px) {
-    .nav-links {
-        flex-direction: column;
+    .nav-links {                /* Cambiar a columna en pantallas pequeñas */
+        flex-direction: column; 
         gap: 1rem;
-    }
-
-    .hero h2 {
-        font-size: 2rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
-    .featured h2 {
-        font-size: 1.5rem;
     }
 }

@@ -19,11 +19,26 @@
                         <li><a href="./pages/categorias.html">Categorías</a></li>
                         <li><a href="./pages/ofertas.html">Ofertas</a></li>
                     </ul>
-                    <button class="cart-button">Carrito</button>
+                    <button onclick="abrirCarrito()" class="cart-button">Carrito</button>
                 </div>
             </nav>
         </div>
     </header>
+    
+    <!-- Main -->
+    <main>
+        <section class="saludo">
+            <h2>Bienvenido a nuestra Tienda de Libros</h2>
+            <p>Explora una amplia variedad de libros de diferentes géneros y autores.</p>
+            <button onclick="location.href='./pages/tienda.html'" class="btn">Ver Libros</button>
+        </section>
+
+        <section class="productos" id="productos-container"></section>
+        <section class="destacados">
+            <h2>Libros Destacados</h2>
+        </section>
+    </main>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -34,5 +49,11 @@
             </ul>
         </div>
     </footer>
+
 </body>
+
+<!-- Java Scripts -->
+<script src="assets/js/carrito.js"></script>
+<script src="assets/js/index.js"></script>
 </html>
+
