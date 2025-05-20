@@ -11,7 +11,7 @@ baseDeDatos.forEach(producto => {
             <p class="producto-precio">$${producto.precio.toLocaleString()} <span class="descuento">(-${producto.descuento}%)</span></p>
             <div class="oculto">
                 <button class="btn"><a class="a" href="./detalles.html">Ver detalles</a></button>
-                <button class="btn" onclick="agregarAlCarrito('${producto.nombre}', ${producto.precio}, ${producto.precio * producto.descuento / 100})">Agregar al Carrito</button>
+                <button class="btn" onclick="agregarAlCarrito('${producto.nombre}', ${producto.precio}, ${producto.precio * producto.descuento / 100}, ${producto.id})">Agregar al Carrito</button>
             </div>    
             `;
         productosContainer.appendChild(articuloProducto);

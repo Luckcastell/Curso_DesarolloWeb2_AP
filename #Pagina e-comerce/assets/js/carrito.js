@@ -1,11 +1,11 @@
 let carrito = [];
 let totalCarrito = 0;
 
-function agregarAlCarrito(nombre, precio, descontado) {
+function agregarAlCarrito(nombre, precio, descontado, id) {
     let precioFinal = precio - descontado;
     totalCarrito += precioFinal;
     document.getElementById('totalCarrito').innerText = totalCarrito.toLocaleString();
-    carrito.push({nombre, precioFinal, precio, descontado});
+    carrito.push({nombre, precioFinal, precio, descontado, id});
     mostrarContenidoCarrito();
     abrirCarrito();
 }
@@ -19,7 +19,8 @@ function mostrarContenidoCarrito() {
             itemCarrito.classList.add('carrito-item');
             itemCarrito.innerHTML = `
                 <h3>${item.nombre}</h3>
-                <p>$${item.precio} - $${item.descontado}</p>
+                <p>$${item.precio.toLocaleString()} - $${item.descontado.toLocaleString()}</p>
+                <button onclick="eliminarProducto(${item.id})"">X</button>
             `;
             contenidoCarrito.appendChild(itemCarrito);
         }
@@ -28,7 +29,8 @@ function mostrarContenidoCarrito() {
             itemCarrito.classList.add('carrito-item');
             itemCarrito.innerHTML = `
                 <h3>${item.nombre}</h3>
-                <p>$${item.precioFinal}</p>
+                <p>$${item.precioFinal.toLocaleString()}</p>
+                <button onclick="eliminarProducto(${item.id})"">X</button>
             `;
             contenidoCarrito.appendChild(itemCarrito);
             }
@@ -43,6 +45,21 @@ function abrirCarrito() {
 function cerrarCarrito() {
     document.getElementById('modalCarrito').style.display = 'none';
 }
+
+function eliminarProducto(id) {
+    const indice = carrito.findIndex(item => item.id === id); // Encontrar el índice del primer producto seleccionado
+    
+    if (indice !== -1) { // Si se encuentra el producto lo elimina
+        carrito.splice(indice, 1); // lo elimina solo una vez 
+    }
+    totalCarrito = carrito.reduce((total, item) => total + item.precioFinal, 0); // Actualiza el carrito
+    document.getElementById('totalCarrito').innerText = totalCarrito.toLocaleString(); // Actualiza el texto en pantalla
+    
+    mostrarContenidoCarrito();
+}
+
+
+
 
 function BorrarTodoElCarrito() {
     carrito = [];
