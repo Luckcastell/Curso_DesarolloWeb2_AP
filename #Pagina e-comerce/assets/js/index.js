@@ -1,6 +1,6 @@
 const productosContainer = document.getElementById('productos-container');
-
-baseDeDatos.forEach(producto => {
+const productosConDescuento = baseDeDatos.filter(producto => producto.descuento >= 1);
+productosConDescuento.forEach(producto => {
     if(producto.descuento > 0){
         const articuloProducto = document.createElement('article');
         articuloProducto.classList.add('productoA');
