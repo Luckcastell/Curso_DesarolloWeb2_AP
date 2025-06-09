@@ -5,7 +5,7 @@ baseDeDatos.forEach(producto => {
         const articuloProducto = document.createElement('article');
         articuloProducto.classList.add('productoA');
         articuloProducto.innerHTML = `
-            <img class="producto-img" src="${producto.img}" alt="${producto.alt}">
+            <img class="producto-img" src="../public/Images/${producto.img}" alt="${producto.alt}">
             <h2 class="producto-titulo">${producto.nombre}</h2>
             <h2 class="producto-subtitulo">${producto.autor}</h2>
             <p class="producto-precio">$${producto.precio.toLocaleString()} <span class="descuento">(-${producto.descuento}%)</span></p>
@@ -19,7 +19,7 @@ baseDeDatos.forEach(producto => {
         const articuloProducto = document.createElement('article');
         articuloProducto.classList.add('productoB');
         articuloProducto.innerHTML = `
-            <img class="producto-img" src="${producto.img}" alt="${producto.alt}">
+            <img class="producto-img" src="../public/Images/${producto.img}" alt="${producto.alt}">
             <h2 class="producto-titulo">${producto.nombre}</h2>
             <h2 class="producto-subtitulo">${producto.autor}</h2>
             <p class="producto-precio">$${producto.precio.toLocaleString()}</p>
